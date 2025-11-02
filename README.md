@@ -1,7 +1,5 @@
 # tailwindcss_setup
 
-# TailwindCSS Setup Tutorial
-
 Each Tailwind setup is on its own branch:
 
 | Method  | Branch | Description |
