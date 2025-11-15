@@ -1,22 +1,30 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Welcome to Header</title>
+
 </head>
-
 <body>
-  <div>
-    <h1 class="font-bold underline">Hello World!</h1>
-    <div class="text-center mt-5">
-      <button
-        class="rounded-full bg-red-600 px-6 py-2 text-white font-bold shadow-lg hover:bg-red-700 transition duration-300">Subscribe</button>
-    </div>
-  </div>
-  <script type="module" src="/src/main.js"></script>
+    <header>
+        <h1 class="logo">Logo</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <nav>
+          <ul>
+            <li><a href="#">Header</a></li>
+            <li><a href="#">Hero</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+      </header>     
+      <script type="module" src="src/main.js"></script>
 </body>
-
 </html>
