@@ -7,24 +7,137 @@
     <title>Welcome to Header</title>
 
 </head>
-<body>
-    <header>
-        <h1 class="logo">Logo</h1>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <nav>
-          <ul>
-            <li><a href="#">Header</a></li>
-            <li><a href="#">Hero</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
+<body class="bg-base-200 text-base-content min-h-screen">
+    <header class="sticky top-0 z-50 bg-base-100 shadow">
+      <div class="navbar max-w-6xl mx-auto">
+        <div class="navbar-start flex-1">
+          <div class="dropdown">
+            <button tabindex="0" role="button" class="btn btn-ghost lg:hidden" aria-label="Toggle navigation">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#hero">Hero</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-xl normal-case" href="#home">Logo</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1 gap-4 font-semibold">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#hero">Hero</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
-        </nav>
-        <label for="nav-toggle" class="nav-toggle-label">
-          <span></span>
-        </label>
-      </header>     
+        </div>
+        <div class="navbar-end flex-none">
+          <a class="btn btn-primary" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </header>  
+
+    <main id="home" class="pt-10 space-y-24">
+      <section id="hero" class="hero bg-base-200">
+        <div class="hero-content flex-col lg:flex-row gap-16 max-w-6xl mx-auto">
+          <div class="space-y-6 max-w-xl">
+            <p class="badge badge-primary badge-outline uppercase tracking-widest">Welcome</p>
+            <h2 class="text-4xl lg:text-5xl font-bold leading-tight">
+              A vibrant Tailwind + DaisyUI experience
+            </h2>
+            <p class="text-lg text-base-content/80">
+              This hero section stays visible beneath a sticky navbar while your audience scrolls. 
+              Explore beautiful components powered entirely by Tailwind CSS utilities.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a href="#features" class="btn btn-primary">See features</a>
+              <a href="#gallery" class="btn btn-outline">View gallery</a>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2">
+            <div class="carousel w-full rounded-box shadow-2xl bg-base-100">
+              <div id="slide1" class="carousel-item relative w-full">
+                <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp?text=Slide+1" class="w-full object-cover" alt="Slide 1 placeholder" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-4 right-4 top-1/2">
+                  <a href="#slide4" class="btn btn-circle btn-sm">❮</a>
+                  <a href="#slide2" class="btn btn-circle btn-sm">❯</a>
+                </div>
+              </div>
+              <div id="slide2" class="carousel-item relative w-full">
+                <img src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp?text=Slide+2" class="w-full object-cover" alt="Slide 2 placeholder" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-4 right-4 top-1/2">
+                  <a href="#slide1" class="btn btn-circle btn-sm">❮</a>
+                  <a href="#slide3" class="btn btn-circle btn-sm">❯</a>
+                </div>
+              </div>
+              <div id="slide3" class="carousel-item relative w-full">
+                <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp?text=Slide+3" class="w-full object-cover" alt="Slide 3 placeholder" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-4 right-4 top-1/2">
+                  <a href="#slide2" class="btn btn-circle btn-sm">❮</a>
+                  <a href="#slide4" class="btn btn-circle btn-sm">❯</a>
+                </div>
+              </div>
+              <div id="slide4" class="carousel-item relative w-full">
+                <img src="https://via.placeholder.com/800x400.png?text=Slide+4" class="w-full object-cover" alt="Slide 4 placeholder" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-4 right-4 top-1/2">
+                  <a href="#slide3" class="btn btn-circle btn-sm">❮</a>
+                  <a href="#slide1" class="btn btn-circle btn-sm">❯</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="max-w-6xl mx-auto px-6">
+        <div class="grid gap-6 md:grid-cols-3">
+          <article class="card bg-base-100 shadow">
+            <div class="card-body">
+              <h3 class="card-title">Responsive components</h3>
+              <p>Leverage DaisyUI building blocks that adapt to every screen.</p>
+            </div>
+          </article>
+          <article class="card bg-base-100 shadow">
+            <div class="card-body">
+              <h3 class="card-title">Utility-first styling</h3>
+              <p>Apply Tailwind classes directly in your markup for rapid iteration.</p>
+            </div>
+          </article>
+          <article class="card bg-base-100 shadow">
+            <div class="card-body">
+              <h3 class="card-title">Customizable themes</h3>
+              <p>Switch DaisyUI themes or create your own palette effortlessly.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="gallery" class="max-w-6xl mx-auto px-6 pb-24">
+        <h3 class="text-3xl font-bold mb-6">Gallery Placeholder</h3>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="skeleton h-48 w-full"></div>
+          <div class="skeleton h-48 w-full"></div>
+          <div class="skeleton h-48 w-full"></div>
+          <div class="skeleton h-48 w-full"></div>
+          <div class="skeleton h-48 w-full"></div>
+          <div class="skeleton h-48 w-full"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-base-100 py-16">
+        <div class="max-w-3xl mx-auto px-6 text-center space-y-4">
+          <h3 class="text-3xl font-bold">Get in touch</h3>
+          <p>Ready to roll with Tailwind and DaisyUI? Reach out and let's build something great.</p>
+          <a class="btn btn-primary btn-wide" href="mailto:hello@example.com">Contact us</a>
+        </div>
+      </section>
+    </main>
+
       <script type="module" src="src/main.js"></script>
 </body>
 </html>
